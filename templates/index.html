@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #chatbox { width: 300px; height: 400px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; }
-        #user-input { width: 80%; }
-        button { width: 18%; }
-    </style>
+    <title>Chatbot UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <div id="chatbox"></div>
-    <input type="text" id="user-input" placeholder="Type your message here..." />
-    <button id="send-button">Send</button>
+    <div class="chat-container">
+        <div class="header">
+            <h1>GPT-4o-mini Chatbot</h1>
+        </div>
+        
+        <div id="chatbox" class="chatbox">
+            <!-- Chat messages will appear here -->
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button id="send-button">Send</button>
+        </div>
+
+        <!-- End Session Button -->
+        <div class="input-container">
+            <button id="end-session-btn">End Session</button>
+        </div>
+    </div>
 
     <script>
         const chatbox = document.getElementById('chatbox');
         const userInput = document.getElementById('user-input');
         const sendButton = document.getElementById('send-button');
+        const endSessionButton = document.getElementById('end-session-btn');
 
         sendButton.onclick = function() {
             const message = userInput.value;
-            chatbox.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+            if (message.trim() === "") return;
+            chatbox.innerHTML += `<div class="message user-message"><strong>You:</strong> ${message}</div>`;
             userInput.value = '';
 
             fetch('/chat', {
@@ -36,8 +48,28 @@
             })
             .then(response => response.json())
             .then(data => {
-                chatbox.innerHTML += `<div><strong>Bot:</strong> ${data.response}</div>`;
+                chatbox.innerHTML += `<div class="message bot-message"><strong>Bot:</strong> ${data.response}</div>`;
                 chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+            });
+        };
+
+        userInput.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                sendButton.click();
+            }
+        });
+
+        // End session and update memory
+        endSessionButton.onclick = function() {
+            fetch('/end_session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Session ended and memory updated.");
             });
         };
     </script>
