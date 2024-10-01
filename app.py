@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import os
 from openai import OpenAI
 from config import OPENAI_API
 from pydantic import BaseModel
@@ -28,7 +29,9 @@ def chat():
     with open('language_skill_memory.json', 'r') as f:
         mem = json.dumps(json.load(f), indent=4)
     # read chat file and update with most recent user message
-    
+    if not os.path.exists('current_chat.json'):
+        with open('current_chat.json', 'w') as f:
+            json.dump([], f)
     with open('current_chat.json', 'r') as f:
         messages = json.load(f)
     print(messages)
