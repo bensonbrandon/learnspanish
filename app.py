@@ -60,11 +60,18 @@ def update_memory():
     
     prompt = f"""
     The student just completed a session with the teacher which is captured in the following message format: the teacher is the 'assistant' and the student is the 'user'.
+    
     {currchat}
     
-    Please update the following json using the information present in this session.  Add to the list within the 'summary_of_sessions' to include a short summary of what the student accomplished in this session.  Include details such as what topics the student learned and the methods which were used to evaluate the student (e.g. review, grammar test, vocab exam).
-    Update the 'short_description_of_language_level' if and only if anything the student did during this session was worth updating it.
-    
+    Please update the following json using the information present in this session.  
+        - short_description_of_language_level: Update the 'short_description_of_language_level' if and only if anything the student did during this session was worth updating it.  This should include the approximate level of the student as A1, A2, B1, B2, C1, or C2 (common European framework).  Be strict in what level you assign.  The student must prove mastery in the relevant areas in order to advance to the next level.  By default, you assume the student doesn't know something unless it is proven in an interaction.  The level assignment should also include a short set of what needs to be learned to get to the next level.
+        - summary_of_sessions: Append to the list within the 'summary_of_sessions' to include a short summary of what the student accomplished in this session.  Include details such as what topics the student learned and the methods which were used to evaluate the student (e.g. review, grammar test, vocab exam).
+        - vocabulary: Append to the list within the 'vocabulary' to include any new vocabulary words the student learned during this session.
+        - grammatical_accuracy_tense_syntax: Append to the list within the 'grammatical_accuracy_tense_syntax' to include any new grammatical rules the student learned during this session.  This should include any new tenses or syntax rules.  Also, within each element of the list include a note about how well the student performs (e.g. struggling, improving, mastered).
+        - reading_comprehension: Append to the list within the 'reading_comprehension' to include any new reading comprehension exercises the student completed during this session.  Make sure that each element of the list include a note about how well the student performed.
+        - writing_expression_and_clarity: Append to the list within the 'writing_expression_and_clarity' to include any new writing exercises the student completed during this session.  Make sure that each element of the list includes a note about how well the student performed. 
+        - conversation_interaction_skills: Append to the list within the 'conversation_interaction_skills' to include any new notable skills the student obtained during this session.  Make sure that each element of the list includes a note about how well the student performed.   
+        
     {mem}
     """
     
