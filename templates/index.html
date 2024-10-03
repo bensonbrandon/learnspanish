@@ -17,7 +17,7 @@
         </div>
         
         <div class="input-container">
-            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <textarea type="text" id="user-input" placeholder="Type your message here..." rows="2"></textarea>
             <button id="send-button">Send</button>
         </div>
 
@@ -53,11 +53,21 @@
             });
         };
 
+        userInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+              // Prevent default form submission
+              event.preventDefault();
+              userInput.value += '\n';
+              userInput.selectionStart = userInput.selectionEnd = userInput.value.length;
+            }
+        });
+
         userInput.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
+            if (event.key === "Enter" && !event.shiftKey) {
                 sendButton.click();
             }
         });
+        
 
         // End session and update memory
         endSessionButton.onclick = function() {
