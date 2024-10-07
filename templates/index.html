@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot UI</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="chat-container">
@@ -48,7 +49,8 @@
             })
             .then(response => response.json())
             .then(data => {
-                chatbox.innerHTML += `<div class="message bot-message"><strong>Bot:</strong> ${data.response}</div>`;
+                resp = marked.parse(data.response)
+                chatbox.innerHTML += `<div class="message bot-message"><strong>Bot:</strong> ${resp}</div>`;
                 chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
             });
         };

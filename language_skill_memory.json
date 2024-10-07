@@ -1,7 +1,8 @@
 {
-    "short_description_of_language_level": "El estudiante ha demostrado una mejora en la correcci\u00f3n gramatical y el uso del vocabulario relevante de \"El Se\u00f1or de los Anillos\", aunque a\u00fan presenta algunos errores menores. Se encuentra en un nivel A2. Para avanzar al nivel B1, debe mejorar su fluidez en la conversaci\u00f3n, la correcci\u00f3n gramatical en tiempo y sintaxis, y ampliar su uso del vocabulario.",
+    "short_description_of_language_level": "El estudiante ha demostrado un avance positivo en su comprensi\u00f3n del vocabulario y oraciones relacionadas con la misa cat\u00f3lica, espec\u00edficamente en la Eucarist\u00eda. Se encuentra en un nivel A2. Para avanzar al nivel B1, debe mejorar su fluidez en la conversaci\u00f3n, la correcci\u00f3n gramatical en tiempo y sintaxis, y ampliar su uso del vocabulario. Tambi\u00e9n debe trabajar en la claridad y precisi\u00f3n de sus escritos.",
     "summary_of_sessions": [
-        "El estudiante particip\u00f3 activamente en una conversaci\u00f3n sobre libros, mostrando inter\u00e9s en la ciencia ficci\u00f3n y espec\u00edficamente en \"El Se\u00f1or de los Anillos\". Se discutieron personajes y tramas, lo que ayud\u00f3 a evaluar su capacidad de comprensi\u00f3n lectora y expresi\u00f3n oral. En esta sesi\u00f3n, el estudiante aprendi\u00f3 vocabulario relacionado con la obra, realiz\u00f3 un examen de vocabulario y discuti\u00f3 la importancia de la amistad en la narrativa, obteniendo resultados positivos. Se trabaj\u00f3 la gram\u00e1tica a trav\u00e9s de correcciones de oraciones escritas. Adem\u00e1s, se introdujeron y definieron nuevas palabras y se clarific\u00f3 el concepto de \"traici\u00f3n\"."
+        "El estudiante particip\u00f3 activamente en una conversaci\u00f3n sobre la misa cat\u00f3lica, aprendiendo vocabulario relacionado con la Eucarist\u00eda y discutiendo sobre la Oraci\u00f3n Eucar\u00edstica II. Se practic\u00f3 la pronunciaci\u00f3n de algunas frases clave y se explic\u00f3 la importancia de ciertas frases en el contexto lit\u00fargico.",
+        "El estudiante trabaj\u00f3 en vocabulario relacionado con la misa, realizando ejercicios de comprensi\u00f3n lectora y mejorando su habilidad de escribir sobre sus experiencias. Tambi\u00e9n recibi\u00f3 correcciones y explic\u00f3 conceptos gramaticales."
     ],
     "vocabulary": [
         "h\u00e9roe",
@@ -17,20 +18,40 @@
         "Gandalf",
         "Mordor",
         "Rohan",
-        "La Comarca"
+        "La Comarca",
+        "Eucarist\u00eda",
+        "Paz",
+        "Santo",
+        "Cielo",
+        "Pan",
+        "Vino",
+        "Cuerpo de Cristo",
+        "Sangre de Cristo",
+        "Memorial",
+        "Gracias",
+        "agradecimiento",
+        "bendici\u00f3n",
+        "Pascua",
+        "regalo",
+        "presente"
     ],
     "grammatical_accuracy_tense_syntax": [
         "El estudiante utiliz\u00f3 frases complejas, aunque con algunos errores de gram\u00e1tica como \"me gusta los generos\" en lugar de \"me gustan los g\u00e9neros\". (Mejorando)",
         "El estudiante aprendi\u00f3 la importancia de usar art\u00edculos definidos e indefinidos correctamente. (Mejorando)",
-        "El estudiante aprendi\u00f3 a corregir errores en el uso de terminaciones plurales y concordancia de n\u00famero en sustantivos. (Mejorando)"
+        "El estudiante aprendi\u00f3 a corregir errores en el uso de terminaciones plurales y concordancia de n\u00famero en sustantivos. (Mejorando)",
+        "El estudiante empez\u00f3 a comprender el uso de formas del imperativo en la liturgia. (Mejorando)",
+        "El estudiante necesita trabajar en la concordancia de g\u00e9nero y n\u00famero en sustantivos y adjetivos. (Mejorando)"
     ],
-    "reading_comprehension": [],
+    "reading_comprehension": [
+        "El estudiante ley\u00f3 un texto sobre la misa y respondi\u00f3 preguntas relacionadas. Demostr\u00f3 una buena comprensi&oacute;n al identificar los elementos clave del texto. (Mejorando)"
+    ],
     "writing_expression_and_clarity": [
         "El estudiante escribi\u00f3 oraciones sobre la amistad en \"El Se\u00f1or de los Anillos\", y realiz\u00f3 correcciones gramaticales, mejorando su claridad y precisi\u00f3n. (Mejorando)",
-        "El estudiante practic\u00f3 la escritura con un examen de vocabulario y realiz\u00f3 correcciones en frases. (Mejorando)"
+        "El estudiante practic\u00f3 la escritura al interactuar con las frases de la Oraci\u00f3n Eucar\u00edstica II. (Mejorando)",
+        "El estudiante escribi\u00f3 sobre su experiencia en una misa, recibiendo correcciones que le ayudar\u00e1n a estructurar mejor sus ideas en el futuro. (Mejorando)"
     ],
     "conversation_interaction_skills": [
-        "El estudiante fue capaz de mantener una conversaci\u00f3n, formular preguntas relevantes y expresar preferencias en cuanto a g\u00e9neros literarios. Mostr\u00f3 inter\u00e9s en profundizar en el tema de los libros. (Mejorando)",
-        "El estudiante demostr\u00f3 mejor comprensi\u00f3n del vocabulario conversacional al usar y preguntar por nuevas palabras. (Mejorando)"
+        "El estudiante fue capaz de mantener una conversaci\u00f3n sobre temas de la misa cat\u00f3lica, mostrando inter\u00e9s por el vocabulario y realizando preguntas relevantes. (Mejorando)",
+        "El estudiante demostr\u00f3 mayor comprensi\u00f3n del vocabulario relacionado con la Eucarist\u00eda y pudo formular preguntas sobre su uso. (Mejorando)"
     ]
 }
